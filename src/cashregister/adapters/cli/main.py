@@ -6,7 +6,7 @@ def main() -> None:
     """
     Cash register initial flow
     """
-    print("Cash register initial flow")
+    print("Cash register initial flow test")
 
 if __name__ == "__main__":
     main()
