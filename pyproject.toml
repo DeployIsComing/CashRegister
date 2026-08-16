@@ -1,13 +1,24 @@
 [project]
 name = "cashregister"
-version = "0.1.0"
-description = "Add your description here"
+version = "0.0.1"
+description = "The function is to tell the cashier how much change is owed, and what denominations should be used"
 readme = "README.md"
-requires-python = ">=3.9"
+authors = [
+  {name = "Carlos Eduardo da Silva", email = "carlosedasilva@gmail.com"},
+]
+license = "GPL-3.0-or-later"
+keywords = ["cash", "register", "cashier", "money", "change"]
+requires-python = ">=3.14"
 dependencies = []
 
+[tool.uv]
+package = true
+
+[project.urls]
+Repository = "https://github.com/DeployIsComing/CashRegister"
+
 [project.scripts]
-cashregister = "cashregister:main"
+cashregister = "cashregister.adapters.cli.main:main"
 
 [build-system]
 requires = ["uv_build>=0.12.5,<0.13.0"]
