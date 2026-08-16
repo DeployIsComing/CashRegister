@@ -13,6 +13,9 @@ class Money(BaseModel):
     @field_validator("currency_unit")
     @staticmethod
     def sorted_desc(m_unit: list[CurrencyUnit]) -> list[CurrencyUnit]:
+        """"
+        Highest value first
+        """
         def get_value(value: CurrencyUnit) -> Decimal:
             return value.value
         return sorted(m_unit, key=get_value, reverse=True)
