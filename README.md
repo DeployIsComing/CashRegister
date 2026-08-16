@@ -24,6 +24,11 @@ analysis).
 
 - Python 3.14 (or above)
 
+## About Libs
+
+- Added pydantic for better file management access 
+- Added flake8 to keep the code neat i.e. "lint", only for dev
+
 ## Setup 
 
 ### Install uv 

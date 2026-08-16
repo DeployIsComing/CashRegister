@@ -9,7 +9,9 @@ authors = [
 license = "GPL-3.0-or-later"
 keywords = ["cash", "register", "cashier", "money", "change"]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "pydantic>=2.13.4",
+]
 
 [tool.uv]
 package = true
@@ -23,3 +25,8 @@ cashregister = "cashregister.adapters.cli.main:main"
 [build-system]
 requires = ["uv_build>=0.12.5,<0.13.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "flake8>=7.3.0",
+]
