@@ -1,5 +1,61 @@
 # Cash Register
 
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Pydantic](https://img.shields.io/badge/Pydantic-e92063?style=for-the-badge&logo=pydantic&logoColor=white)
+![uv](https://img.shields.io/badge/uv-DE5FE9?style=for-the-badge&logo=astral&logoColor=white)
+
+The idea here in this project is to focus in the business core and avoid overengineering just to impress stakeholders. 
+I planned to keep the system simple, clean, modern, easy to maintain for internationalization and secure. I tried to 
+follow some principles of clean architecture and DDD. Due to the size of the project and its simplicity not all the layers 
+were implemented. These main ideas helped me to set the design principles for this system. 
+
+## The use of AI 
+
+I could generate this system in the blink of an eye with AI. However, as this is a challenge most part of the code 
+I tried to envision and develop on my own. I have used AI to generate test 
+cases and "plan" in all possible testing scenarios just to keep the system secure: The spec used to create the tests can be found in 
+.claude folder. This approach takes more time than necessary, but I can present a little bit some of my skills (programming and 
+analysis). 
+
+## Development Environment 
+
+- PyCharm 2026.2.1
+
+## Requirement 
+
+- Python 3.14 (or above)
+
+## Setup 
+
+### Install uv 
+
+If you do not have uv installed run the following command in your terminal:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+### Pin python version
+
+```bash
+uv python pin 3.14
+```
+### Install dependencies 
+
+```bash
+uv sync
+```
+
+### Run the project
+
+```bash
+uv run main.py
+```
+
+## Architectural Decisions
+
+I decided to keep the config folder outside the "app" folder because it is the core. So when decide for Euro/France currency
+there is no need to touch the files under app folder.
+
 ## The Problem
 Creative Cash Draw Solutions is a client who wants to provide something different for the cashiers who use their system. The function of the application is to tell the cashier how much change is owed, and what denominations should be used. In most cases the app should return the minimum amount of physical change, but the client would like to add a twist. If the "owed" amount is divisible by 3, the app should randomly generate the change denominations (but the math still needs to be right :))
 
