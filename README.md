@@ -55,6 +55,14 @@ uv sync
 uv run main.py
 ```
 
+### Tests 
+
+To test the domain layer entities and services 
+
+```bash
+uv run cashregister --simple-test
+```
+
 ## Architectural Decisions
 
 I decided to keep the config folder outside the "app" folder because it is the core. So when decide for Euro/France currency
