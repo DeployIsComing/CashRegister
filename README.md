@@ -78,7 +78,7 @@ uv run cashregister --test
 Pytest unit tests:
 
 ```bash
-# Simple basic tests just to check initial core entities
+# Pytest coverage
 uv run pytest tests/ -v
 ```
 
