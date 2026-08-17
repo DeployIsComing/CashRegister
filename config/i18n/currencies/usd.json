@@ -1,7 +1,7 @@
 {
   "code": "USD",
   "symbol": "$",
-  "denominations": [
+  "currency_units": [
     { "name": "dollar", "plural": "dollars", "value": "1.00" },
     { "name": "quarter", "plural": "quarters", "value": "0.25" },
     { "name": "dime", "plural": "dimes", "value": "0.10" },
