@@ -4,6 +4,7 @@ from cashregister.domain.entities.money import Money
 from cashregister.domain.entities.currency_unit import CurrencyUnit
 from cashregister.domain.services.minimum_coins import calc_minimum_change
 
+
 def test_money_entity() -> None:
     print("--- Testing Money entity ---")
 
@@ -36,7 +37,9 @@ def test_minimum_change() -> None:
         CurrencyUnit(name="Vinte Reais", value=Decimal("20.00"), plural="reais"),
         CurrencyUnit(name="Dez Reais", value=Decimal("10.00"), plural="reais"),
         CurrencyUnit(name="Cinquenta Centavos", value=Decimal("0.50"), plural="reais"),
-        CurrencyUnit(name="Vinte e Cinco Centavos", value=Decimal("0.25"),plural="real"),
+        CurrencyUnit(
+            name="Vinte e Cinco Centavos", value=Decimal("0.25"), plural="real"
+        ),
         CurrencyUnit(name="Cinco Centavos", value=Decimal("0.05"), plural="real"),
     ]
 
@@ -49,7 +52,9 @@ def test_minimum_change() -> None:
 
     print("Result:")
     for line in result.lines:
-        print(f" - {line.quantity}x {line.currency_unit.name} ({brl.symbol} {line.currency_unit.value})")
+        print(
+            f" - {line.quantity}x {line.currency_unit.name} ({brl.symbol} {line.currency_unit.value})"
+        )
 
     print("❌ Incorrect values")
     try:

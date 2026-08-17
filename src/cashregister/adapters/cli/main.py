@@ -3,7 +3,10 @@
 # Author: Carlos Eduardo da Silva <carlosedasilva@gmail.com>
 import time
 import sys
-from cashregister.adapters.cli.simple_entity_tests import test_money_entity, test_minimum_change
+from cashregister.adapters.cli.simple_entity_tests import (
+    test_money_entity,
+    test_minimum_change,
+)
 
 
 def main() -> None:
@@ -22,7 +25,7 @@ def main() -> None:
     # system additional options
     args = sys.argv[1:]
     if args:
-        if args[0] == "--simple-test": # testing entities if true
+        if args[0] == "--simple-test":  # testing entities if true
             print("\n\n FIRST TEST")
             test_money_entity()
             print("\n\nSECOND TEST")
@@ -31,6 +34,7 @@ def main() -> None:
     # TODO - thinking about in creating an output data for api consumption or mcp
     # TODO - add jupyter or something related to reports to provide information
     # TODO - for internationalization avoid -> if coin == "quarter":
+
 
 if __name__ == "__main__":
     main()

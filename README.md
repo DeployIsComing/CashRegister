@@ -70,10 +70,14 @@ To test the domain layer entities and services
 uv run cashregister --simple-test
 ```
 
-### Lint
+### Prettify the code
 
 ```bash
-uv run flake8
+# check for errors and fix
+uv run ruff check --fix .
+
+# lint the code automatically
+uv run ruff format .
 ```
 
 ## Architectural Decisions

@@ -17,16 +17,16 @@ def randomize_change(amount: Decimal, money: Money) -> ChangeResult:
     remaining = amount
     lines: list[ChangeLine] = []
 
-    for unit in money.currency_units[:-1]: # except last element
+    for unit in money.currency_units[:-1]:  # except last element
         # getting the maximum integer value random(0, "max found")
         quantity = random.randint(0, int(remaining // unit.value))
 
         if quantity:
             lines.append(ChangeLine(currency_unit=unit, quantity=quantity))
-            remaining -= unit.value * quantity # what was left
+            remaining -= unit.value * quantity  # what was left
 
     smallest = money.currency_units[-1]
-    quantity = int(remaining // smallest.value) # ignoring decimal part
+    quantity = int(remaining // smallest.value)  # ignoring decimal part
 
     if quantity:
         lines.append(ChangeLine(currency_unit=smallest, quantity=quantity))
