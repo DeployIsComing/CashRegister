@@ -31,7 +31,7 @@ analysis).
 ## About Libs
 
 - Added pydantic for better file management access and class support
-- Added flake8 to keep the code neat i.e. "lint", only for dev
+- Added ruff to keep the code neat i.e. "lint", only for dev
 
 ## Setup 
 
@@ -119,7 +119,7 @@ keeping the separation of concerns.
 
 ## BONUS
 
-A few extra spicy.
+A few extra spicy code...
 
 ### AI support 
 
@@ -142,7 +142,12 @@ In addition, I have added a simple Github Actions workflow to prettify the code.
 
 ### Claude
 
-Created claude specs to generate pytest scenarios. 
+Created claude specs to generate pytest scenarios. I have used the following prompt to generate the unit tests:
+
+```txt
+Read the specifications in spec/test_suite.md and generate the 
+complete unit tests in separate files within the tests/ folder using pytest.
+```
 
 ## The Problem
 Creative Cash Draw Solutions is a client who wants to provide something different for the cashiers who use their system. The function of the application is to tell the cashier how much change is owed, and what denominations should be used. In most cases the app should return the minimum amount of physical change, but the client would like to add a twist. If the "owed" amount is divisible by 3, the app should randomly generate the change denominations (but the math still needs to be right :))
