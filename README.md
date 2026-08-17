@@ -70,6 +70,12 @@ To test the domain layer entities and services
 uv run cashregister --simple-test
 ```
 
+### Lint
+
+```bash
+uv run flake8
+```
+
 ## Architectural Decisions
 
 I decided to keep the config folder outside the "app" folder because it is the core. So when decide for Euro/France currency
