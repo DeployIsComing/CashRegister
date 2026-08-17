@@ -26,7 +26,7 @@ analysis).
 
 ## About Libs
 
-- Added pydantic for better file management access 
+- Added pydantic for better file management access and class support
 - Added flake8 to keep the code neat i.e. "lint", only for dev
 
 ## Setup 
@@ -43,6 +43,13 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ```bash
 uv python pin 3.14
 ```
+
+### Start venv 
+
+```bash
+source .venv/bin/activate
+```
+
 ### Install dependencies 
 
 ```bash
