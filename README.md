@@ -17,7 +17,7 @@ were implemented. These main ideas helped me to set the design principles for th
 
 As this is a challenge part of the code I tried to envision, design and develop on my own. I have used AI to generate test 
 cases and "plan" in all possible testing scenarios just to keep the system secure: The spec used to create the tests can be found in 
-.claude folder. This approach takes more time than necessary, but I can present a little bit some of my skills (programming and 
+spec folder. This approach takes more time than necessary, but I can present a little bit some of my skills (programming and 
 analysis). 
 
 ## Development Environment 
