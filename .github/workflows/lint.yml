@@ -25,3 +25,6 @@ jobs:
 
       - name: Check code formatting and fix
         run: uv run ruff format .
+
+      - name: Running pytest
+        run: uv run pytest tests/ -v

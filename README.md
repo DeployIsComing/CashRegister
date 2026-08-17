@@ -71,7 +71,15 @@ uv run main.py
 To test the domain layer entities and services 
 
 ```bash
+# Simple basic tests just to check initial core entities
 uv run cashregister --test
+```
+
+Pytest unit tests:
+
+```bash
+# Simple basic tests just to check initial core entities
+uv run pytest tests/ -v
 ```
 
 ### Prettify the code
@@ -145,8 +153,7 @@ In addition, I have added a simple Github Actions workflow to prettify the code.
 Created claude specs to generate pytest scenarios. I have used the following prompt to generate the unit tests:
 
 ```txt
-Read the specifications in spec/test_suite.md and generate the 
-complete unit tests in separate files within the tests/ folder using pytest.
+Read the specifications in spec/test_suite.md and generate the complete unit tests (only for the project under src folder) in separate files within the tests/ folder using pytest.
 ```
 
 ## The Problem
