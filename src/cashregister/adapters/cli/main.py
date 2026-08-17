@@ -3,7 +3,7 @@
 # Author: Carlos Eduardo da Silva <carlosedasilva@gmail.com>
 import time
 import sys
-from cashregister.adapters.cli.simple_entity_tests import test_money_entity
+from cashregister.adapters.cli.simple_entity_tests import test_money_entity, test_minimum_change
 
 
 def main() -> None:
@@ -23,8 +23,10 @@ def main() -> None:
     args = sys.argv[1:]
     if args:
         if args[0] == "--simple-test": # testing entities if true
-            print("Testing Money entity...")
+            print("\n\n FIRST TEST")
             test_money_entity()
+            print("\n\nSECOND TEST")
+            test_minimum_change()
 
     # TODO - thinking about in creating an output data for api consumption or mcp
     # TODO - add jupyter or something related to reports to provide information
