@@ -9,6 +9,10 @@ I planned to keep the system simple, clean, modern, easy to maintain for interna
 follow some principles of clean architecture and DDD. Due to the size of the project and its simplicity not all the layers 
 were implemented. These main ideas helped me to set the design principles for this system. 
 
+## Workflow Status 
+
+[![Lint & Format Code](https://github.com/DeployIsComing/CashRegister/actions/workflows/lint.yml/badge.svg)](https://github.com/DeployIsComing/CashRegister/actions/workflows/lint.yml)
+
 ## The use of AI 
 
 As this is a challenge most part of the code I tried to envision and develop on my own. I have used AI to generate test 
