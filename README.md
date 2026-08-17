@@ -71,7 +71,7 @@ uv run main.py
 To test the domain layer entities and services 
 
 ```bash
-uv run cashregister --simple-test
+uv run cashregister --test
 ```
 
 ### Prettify the code
@@ -84,10 +84,38 @@ uv run ruff check --fix .
 uv run ruff format .
 ```
 
+## Prompt usage 
+
+Prompt options are beautifully formatted for end-users using the lib argparse. To invoke all
+the options:
+
+```bash
+# help
+uv run cashregister --help
+
+# Running happy path 
+uv run cashregister input_transactions.txt
+
+# Simple basic tests just to test domain/entities (vo)
+uv run cashregister input_transactions.txt --test
+
+# Output to a file 
+uv run cashregister input_transactions.txt -o output.txt
+
+# read the file 
+cat output.txt
+```
+
+ps: in case user wants to test different values, please add it to input_transactions.txt
+
 ## Architectural Decisions
 
 I decided to keep the config folder outside the "app" folder because it is the core. So when decide for Euro/France currency
 there is no need to touch the files under app folder.
+
+Also with the "adapters" layer implemented in case stakeholders decide to create, in the future, an *API for HTTP* 
+such as FastAPI, for transactions just add it as a new adapter, simply as that. No need to change the rest of the code 
+keeping the separation of concerns. 
 
 ## The Problem
 Creative Cash Draw Solutions is a client who wants to provide something different for the cashiers who use their system. The function of the application is to tell the cashier how much change is owed, and what denominations should be used. In most cases the app should return the minimum amount of physical change, but the client would like to add a twist. If the "owed" amount is divisible by 3, the app should randomly generate the change denominations (but the math still needs to be right :))
