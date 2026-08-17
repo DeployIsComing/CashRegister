@@ -4,4 +4,4 @@ from typing import Callable
 from cashregister.domain.entities.money import Money
 from cashregister.domain.entities.change import ChangeResult
 
-ChangeStrategy = Callable[[Decimal, Money], ChangeResult]
+ChangeMethod = Callable[[Decimal, Money], ChangeResult]
