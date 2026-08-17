@@ -14,12 +14,12 @@ def test_money_entity() -> None:
         CurrencyUnit(name="Vinte Reais", value=Decimal("20.00"), plural="reais"),
     ]
 
-    money = Money(code="BRL", symbol="R$", currency_unit=m_units)
+    money = Money(code="BRL", symbol="R$", currency_units=m_units)
 
     print("-----------------------------------------------")
-    print(f"Currency: {money.code} ({money.symbol} = {money.currency_unit})")
+    print(f"Currency: {money.code} ({money.symbol} = {money.currency_units})")
     print("\nCurrency units, should show highest value first:")
     print("-----------------------------------------------")
 
-    for unit in money.currency_unit:
+    for unit in money.currency_units:
         print(f" - {unit.name}: {money.symbol} {unit.value}")

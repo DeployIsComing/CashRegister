@@ -8,9 +8,9 @@ from cashregister.domain.entities.currency_unit import CurrencyUnit
 class Money(BaseModel):
     code: str
     symbol: str
-    currency_unit: list[CurrencyUnit]
+    currency_units: list[CurrencyUnit]
 
-    @field_validator("currency_unit")
+    @field_validator("currency_units")
     @staticmethod
     def sorted_desc(m_unit: list[CurrencyUnit]) -> list[CurrencyUnit]:
         """"

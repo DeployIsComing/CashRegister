@@ -18,7 +18,7 @@ def main() -> None:
     print("⚛️ Initializing quantum computing         [OK]")
     time.sleep(1)
     print("🛰️ Synchronizing starlink constellation   [OK]")
-    
+
     # system additional options
     args = sys.argv[1:]
     if args:
@@ -27,6 +27,8 @@ def main() -> None:
             test_money_entity()
 
     # TODO - thinking about in creating an output data for api consumption or mcp
+    # TODO - add jupyter or something related to reports to provide information
+    # TODO - for internationalization avoid -> if coin == "quarter":
 
 if __name__ == "__main__":
     main()
