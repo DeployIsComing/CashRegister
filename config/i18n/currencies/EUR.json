@@ -1,0 +1,16 @@
+{
+  "code": "EUR",
+  "symbol": "€",
+  "currency_units": [
+    {
+      "name": "euro",
+      "plural": "euros",
+      "value": "1.00"
+    },
+    {
+      "name": "cent",
+      "plural": "cents",
+      "value": "0.01"
+    }
+  ]
+}

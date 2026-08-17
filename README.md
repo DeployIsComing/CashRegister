@@ -114,8 +114,35 @@ I decided to keep the config folder outside the "app" folder because it is the c
 there is no need to touch the files under app folder.
 
 Also with the "adapters" layer implemented in case stakeholders decide to create, in the future, an *API for HTTP* 
-such as FastAPI, for transactions just add it as a new adapter, simply as that. No need to change the rest of the code 
-keeping the separation of concerns. 
+such as FastAPI, for transactions just add it as a new adapter, simply as that (ABC, 123). No need to change the rest of the code 
+keeping the separation of concerns.
+
+## BONUS
+
+A few extra spicy.
+
+### AI support 
+
+Having in mind the future expansion of Cash Register to other countries, I developed an AI powered script to generate 
+currency JSON files for any desired country. The scripts get the 3-digit country code informed in CLI and generates 
+the JSON using Groq free AI API service.
+
+```bash
+# Running the script
+uv run python scripts/generate_currency_json.py
+
+# You will be prompted for the 3-digit code, please inform it such as BRL, EUR, CAD, etc.
+```
+
+ps: *Please, bear in mind you are required to create a free API key and inform inside the script at: https://console.groq.com*
+
+### Github actions 
+
+In addition, I have added a simple Github Actions workflow to prettify the code. 
+
+### Claude
+
+Created claude specs to generate pytest scenarios. 
 
 ## The Problem
 Creative Cash Draw Solutions is a client who wants to provide something different for the cashiers who use their system. The function of the application is to tell the cashier how much change is owed, and what denominations should be used. In most cases the app should return the minimum amount of physical change, but the client would like to add a twist. If the "owed" amount is divisible by 3, the app should randomly generate the change denominations (but the math still needs to be right :))

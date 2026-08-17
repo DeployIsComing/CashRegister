@@ -66,10 +66,7 @@ def main() -> None:
         print("\n\nSECOND TEST")
         test_minimum_change()
 
-    # TODO - thinking about in creating an output data for api consumption or mcp
-    # TODO - add jupyter or something related to reports to provide information
-    # TODO - for internationalization avoid -> if coin == "quarter":
-
+    # TODO - thinking about creating an output data for api consumption or mcp
 
 if __name__ == "__main__":
     main()
