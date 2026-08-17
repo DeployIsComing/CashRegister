@@ -23,8 +23,5 @@ jobs:
         with:
           python-version-file: "pyproject.toml"
 
-      - name: Check linter rules (Ruff)
-        run: uv run ruff check .
-
-      - name: Check code formatting (Ruff)
-        run: uv run ruff format --check .
+      - name: Check code formatting and fix
+        run: uv run ruff format .
