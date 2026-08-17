@@ -18,11 +18,11 @@ def main() -> None:
     print("⚛️ Initializing quantum computing         [OK]")
     time.sleep(1)
     print("🛰️ Synchronizing starlink constellation   [OK]")
-
+    
     # system additional options
     args = sys.argv[1:]
     if args:
-        if args == "--simple-test": # testing entities if true
+        if args[0] == "--simple-test": # testing entities if true
             print("Testing Money entity...")
             test_money_entity()
 
